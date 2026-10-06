@@ -1,0 +1,91 @@
+{
+ "updated": "2026-10-06",
+ "period": {
+  "from": "2026-09-08",
+  "to": "2026-10-05"
+ },
+ "twitch": {
+  "followers": 950,
+  "type": "affiliate",
+  "streams_28d": 13,
+  "streams_per_week": 6.5,
+  "avg_stream_hours": 3.3,
+  "window_days": 14
+ },
+ "youtube": {
+  "subscribers": 37,
+  "views_28d": 36140,
+  "watch_hours_28d": 111,
+  "likes_28d": 146,
+  "age": {
+   "18-24": 10.3,
+   "25-34": 47.3,
+   "35-44": 29.1,
+   "45-54": 9.3,
+   "55-64": 1.3,
+   "65+": 2.6
+  },
+  "gender": {
+   "male": 98.1,
+   "female": 1.8
+  },
+  "countries": [
+   {
+    "code": "RU",
+    "share": 56
+   },
+   {
+    "code": "UA",
+    "share": 13
+   },
+   {
+    "code": "KZ",
+    "share": 9
+   },
+   {
+    "code": "KG",
+    "share": 8
+   },
+   {
+    "code": "BY",
+    "share": 7
+   }
+  ],
+  "top": [
+   {
+    "title": "Слабая ЛТ? 1224 урона за 6 секунд, Char Mle 75",
+    "views": 2688,
+    "url": "https://youtube.com/shorts/9TZb6irVjsQ"
+   },
+   {
+    "title": "420 мм пробития мало? 1114 одним выстрелом",
+    "views": 2683,
+    "url": "https://youtube.com/shorts/7xRD6Khbd_E"
+   },
+   {
+    "title": "С подпалом, детка",
+    "views": 2529,
+    "url": "https://youtube.com/shorts/ou_RrowCKOU"
+   },
+   {
+    "title": "Таран для слабаков? Два фрага за 12 секунд",
+    "views": 2422,
+    "url": "https://youtube.com/shorts/yQWzg-9sCYQ"
+   }
+  ]
+ },
+ "instagram": {
+  "followers": 15,
+  "views_28d": 32108,
+  "reels_28d": 27
+ },
+ "tiktok": {
+  "views_28d": 8682,
+  "videos_28d": 20
+ },
+ "community": {
+  "telegram": 43,
+  "discord": 66
+ },
+ "shorts_views_28d": 76930
+}

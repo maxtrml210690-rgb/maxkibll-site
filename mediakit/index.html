@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MAXKIBLL · медиакит</title>
+<meta name="description" content="World of Tanks на русском: стримы на Twitch и ролики каждый день на YouTube, TikTok и Instagram.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0e121e;--panel:#161c2c;--line:#262f45;--text:#eef1f7;--muted:#9aa5bd;--yellow:#ffd600;--teal:#19b5a8;--purple:#9146ff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:inherit}
+.wrap{max-width:980px;margin:0 auto;padding:32px 16px 64px}
+.top{display:flex;justify-content:flex-end;gap:8px}
+.lang button{background:none;border:1px solid var(--line);color:var(--muted);padding:4px 10px;border-radius:999px;font:500 13px Inter,sans-serif;cursor:pointer}
+.lang button.on{color:var(--bg);background:var(--yellow);border-color:var(--yellow)}
+.hero{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center;margin:24px 0 32px}
+.hero img{width:132px;height:132px;border-radius:50%;background:#1b2338;border:3px solid var(--yellow)}
+h1{font:700 52px/1 Oswald,Impact,sans-serif;letter-spacing:.5px;margin:0}
+.tag{color:var(--muted);margin:8px 0 14px}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:14px;color:var(--muted)}
+.pill b{color:var(--text);font-weight:600}
+.cta[hidden]{display:none}
+.cta{display:inline-block;margin-top:16px;background:var(--yellow);color:var(--bg);font:700 18px Oswald,sans-serif;letter-spacing:.5px;padding:10px 18px;border-radius:10px;text-decoration:none}
+.big{background:linear-gradient(135deg,#1b2238,#121828);border:1px solid var(--line);border-radius:18px;padding:24px;margin-bottom:16px}
+.big .n{font:700 64px/1 Oswald,sans-serif;color:var(--yellow)}
+.big .l{color:var(--muted);margin-top:6px}
+.split{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.split>div{background:#0f1424;border:1px solid var(--line);border-radius:12px;padding:12px}
+.split .v{font:700 26px Oswald,sans-serif}
+.split .k{color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px}
+h2{font:700 22px Oswald,sans-serif;letter-spacing:.4px;margin:0 0 14px;text-transform:uppercase}
+.row{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row span:first-child{color:var(--muted)}
+.row span:last-child{font-weight:600}
+.bar{height:8px;background:#0f1424;border-radius:99px;overflow:hidden;margin-top:6px}
+.bar i{display:block;height:100%;background:var(--teal)}
+.brow{margin:10px 0}
+.brow .t{display:flex;justify-content:space-between;font-size:14px}
+.brow .t span:first-child{color:var(--muted)}
+ol.top{display:block;margin:0;padding-left:20px}
+ol.top li{padding:6px 0}
+ol.top a{text-decoration:none;border-bottom:1px solid var(--line)}
+ol.top small{color:var(--muted)}
+.formats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.formats>div{background:#0f1424;border:1px solid var(--line);border-radius:12px;padding:14px}
+.formats b{display:block;font:700 17px Oswald,sans-serif;letter-spacing:.3px;margin-bottom:4px}
+.formats span{color:var(--muted);font-size:14px}
+.links{display:flex;flex-wrap:wrap;gap:8px}
+.links a{border:1px solid var(--line);border-radius:10px;padding:8px 12px;text-decoration:none;font-weight:500}
+.links a:hover{border-color:var(--yellow)}
+.foot{color:var(--muted);font-size:13px;margin-top:24px}
+.full{grid-column:1/-1}
+@media (max-width:720px){
+  .hero{grid-template-columns:1fr;text-align:center;justify-items:center}
+  .pills{justify-content:center}
+  h1{font-size:44px}
+  .grid,.formats{grid-template-columns:1fr}
+  .split{grid-template-columns:1fr}
+  .big .n{font-size:52px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><div class="lang"><button data-l="ru" class="on">RU</button> <button data-l="en">EN</button></div></div>
+
+  <section class="hero">
+    <img src="avatar.png" alt="MAXKIBLL">
+    <div>
+      <h1>MAXKIBLL</h1>
+      <div class="tag" data-t="tag"></div>
+      <div class="pills" id="pills"></div>
+      <a class="cta" id="cta" hidden data-t="cta"></a>
+    </div>
+  </section>
+
+  <section class="big">
+    <div class="n" id="reach">—</div>
+    <div class="l" data-t="reach"></div>
+    <div class="split" id="split"></div>
+  </section>
+
+  <div class="grid">
+    <section class="card"><h2 data-t="live"></h2><div id="live"></div></section>
+    <section class="card"><h2 data-t="community"></h2><div id="community"></div></section>
+    <section class="card"><h2 data-t="audience"></h2><div id="age"></div><div id="gender" style="margin-top:14px"></div></section>
+    <section class="card"><h2 data-t="geo"></h2><div id="geo"></div></section>
+    <section class="card full"><h2 data-t="top"></h2><ol class="top" id="top"></ol></section>
+    <section class="card full"><h2 data-t="formats"></h2><div class="formats" id="formats"></div></section>
+    <section class="card full"><h2 data-t="channels"></h2><div class="links">
+      <a href="https://twitch.tv/maxkibll">Twitch</a>
+      <a href="https://www.youtube.com/channel/UCBqplZMSWsNhnBql7hmKNpA">YouTube</a>
+      <a href="https://www.tiktok.com/@maxkibll">TikTok</a>
+      <a href="https://instagram.com/maxkibll">Instagram</a>
+      <a href="https://t.me/maxkibll">Telegram</a>
+      <a href="https://discord.gg/XWU2Mgn6VK">Discord</a>
+    </div></section>
+  </div>
+  <div class="foot" id="foot"></div>
+</div>
+<script>
+const CONTACT = ""; // ссылка для связи (Telegram или почта); пусто — кнопка скрыта
+const T = {
+ ru:{tag:"World of Tanks на русском · сервер EU · стримы на Twitch и ролики каждый день",cta:"Связаться",reach:"просмотров роликов за 28 дней на трёх площадках",
+     live:"Эфиры",community:"Сообщество",audience:"Аудитория YouTube",geo:"Страны",top:"Лучшие ролики месяца",formats:"Форматы рекламы",channels:"Каналы",
+     followers:"фолловеров",affiliate:"компаньон Twitch",perweek:"эфиров в неделю",hours:"часов в среднем за эфир",drops:"дропсы Twitch",
+     tg:"Telegram-канал",ds:"Discord-сервер",subs:"подписчиков YouTube",views:"просмотров",male:"мужчины",female:"женщины",
+     updated:"Обновлено",period:"период",price:"Стоимость по запросу",
+     f:[["Интеграция на стриме","упоминание голосом, ссылка в чате и в описании эфира, баннер на экране"],["Шортс с интеграцией","ролик на YouTube, TikTok и Instagram с упоминанием и ссылкой"],["Розыгрыш","коды или призы на стриме, условия от рекламодателя"],["Ссылка в описаниях","во всех роликах недели и в Telegram"]]},
+ en:{tag:"World of Tanks in Russian · EU server · Twitch streams and a new Short every day",cta:"Get in touch",reach:"Shorts views in 28 days across three platforms",
+     live:"Live",community:"Community",audience:"YouTube audience",geo:"Countries",top:"Top Shorts this month",formats:"Ad formats",channels:"Channels",
+     followers:"followers",affiliate:"Twitch Affiliate",perweek:"streams per week",hours:"hours per stream on average",drops:"Twitch Drops",
+     tg:"Telegram channel",ds:"Discord server",subs:"YouTube subscribers",views:"views",male:"male",female:"female",
+     updated:"Updated",period:"period",price:"Pricing on request",
+     f:[["Stream integration","voice mention, link in chat and stream info, on-screen banner"],["Sponsored Short","a Short on YouTube, TikTok and Instagram with a mention and link"],["Giveaway","codes or prizes on stream, terms from the sponsor"],["Description links","in every video of the week and on Telegram"]]}};
+const C = {ru:{RU:"Россия",UA:"Украина",KZ:"Казахстан",KG:"Киргизия",BY:"Беларусь",AM:"Армения",DE:"Германия",PL:"Польша",UZ:"Узбекистан",GE:"Грузия"},
+           en:{RU:"Russia",UA:"Ukraine",KZ:"Kazakhstan",KG:"Kyrgyzstan",BY:"Belarus",AM:"Armenia",DE:"Germany",PL:"Poland",UZ:"Uzbekistan",GE:"Georgia"}};
+let L = "ru", D = null;
+try { L = localStorage.getItem("mk-lang") || "ru"; } catch(e) {}
+const fmt = n => (n==null?"—":Number(n).toLocaleString(L==="ru"?"ru-RU":"en-US"));
+const row = (k,v) => `<div class="row"><span>${k}</span><span>${v}</span></div>`;
+const bar = (k,v) => `<div class="brow"><div class="t"><span>${k}</span><span>${v}%</span></div><div class="bar"><i style="width:${Math.min(100,v)}%"></i></div></div>`;
+function render(){
+  const t=T[L]; document.documentElement.lang=L;
+  document.querySelectorAll("[data-t]").forEach(e=>e.textContent=t[e.dataset.t]||"");
+  document.querySelectorAll(".lang button").forEach(b=>b.classList.toggle("on",b.dataset.l===L));
+  const cta=document.getElementById("cta"); if(CONTACT){cta.hidden=false;cta.href=CONTACT;}
+  if(!D) return;
+  const tw=D.twitch||{}, yt=D.youtube||{}, ig=D.instagram||{}, tt=D.tiktok||{}, cm=D.community||{};
+  document.getElementById("pills").innerHTML=[`<span class="pill"><b>${fmt(tw.followers)}</b> ${t.followers} Twitch</span>`,`<span class="pill">${t.affiliate}</span>`,`<span class="pill">${t.drops}</span>`].join("");
+  document.getElementById("reach").textContent=fmt(D.shorts_views_28d);
+  document.getElementById("split").innerHTML=[["YouTube",yt.views_28d],["Instagram",ig.views_28d],["TikTok",tt.views_28d]].map(([k,v])=>`<div><div class="v">${fmt(v)}</div><div class="k">${k} · ${t.views}</div></div>`).join("");
+  document.getElementById("live").innerHTML=row("Twitch",`${fmt(tw.followers)} ${t.followers}`)+row(t.perweek,tw.streams_per_week??"—")+row(t.hours,tw.avg_stream_hours??"—")+row(t.drops,"✓");
+  document.getElementById("community").innerHTML=row(t.tg,fmt(cm.telegram))+row(t.ds,fmt(cm.discord))+row(t.subs,fmt(yt.subscribers))+row("Instagram",fmt(ig.followers));
+  const age=yt.age||{}; document.getElementById("age").innerHTML=Object.entries(age).filter(([k,v])=>v>=1).map(([k,v])=>bar(k,Math.round(v))).join("");
+  const g=yt.gender||{}; document.getElementById("gender").innerHTML=bar(t.male,Math.round(g.male||0))+bar(t.female,Math.round(g.female||0));
+  document.getElementById("geo").innerHTML=(yt.countries||[]).map(c=>bar(C[L][c.code]||c.code,c.share)).join("");
+  document.getElementById("top").innerHTML=(yt.top||[]).map(v=>`<li><a href="${v.url}">${v.title}</a> <small>· ${fmt(v.views)} ${t.views}</small></li>`).join("");
+  document.getElementById("formats").innerHTML=t.f.map(([a,b])=>`<div><b>${a}</b><span>${b}</span></div>`).join("")+`<div class="full" style="grid-column:1/-1;background:none;border:0;padding:4px 0;color:var(--muted)">${t.price}</div>`;
+  document.getElementById("foot").textContent=`${t.updated}: ${D.updated} · ${t.period}: ${D.period.from} → ${D.period.to}`;
+}
+document.querySelectorAll(".lang button").forEach(b=>b.onclick=()=>{L=b.dataset.l; try{localStorage.setItem("mk-lang",L)}catch(e){} render();});
+fetch("stats.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{D=d;render();}).catch(()=>render());
+render();
+</script>
+</body>
+</html>
