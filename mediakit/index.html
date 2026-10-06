@@ -106,7 +106,8 @@ ol.top small{color:var(--muted)}
   <div class="foot" id="foot"></div>
 </div>
 <script>
-const CONTACT = ""; // ссылка для связи (Telegram или почта); пусто — кнопка скрыта
+const CONTACT = "mailto:maxkibllstreamer@gmail.com"; // ссылка для связи; пусто — кнопка скрыта
+const EMAIL = "maxkibllstreamer@gmail.com";
 const T = {
  ru:{tag:"World of Tanks на русском · сервер EU · стримы на Twitch и ролики каждый день",cta:"Связаться",reach:"просмотров роликов за 28 дней на трёх площадках",
      live:"Эфиры",community:"Сообщество",audience:"Аудитория YouTube",geo:"Страны",top:"Лучшие ролики месяца",formats:"Форматы рекламы",channels:"Каналы",
@@ -131,7 +132,7 @@ function render(){
   const t=T[L]; document.documentElement.lang=L;
   document.querySelectorAll("[data-t]").forEach(e=>e.textContent=t[e.dataset.t]||"");
   document.querySelectorAll(".lang button").forEach(b=>b.classList.toggle("on",b.dataset.l===L));
-  const cta=document.getElementById("cta"); if(CONTACT){cta.hidden=false;cta.href=CONTACT;}
+  const cta=document.getElementById("cta"); if(CONTACT){cta.hidden=false;cta.href=CONTACT;cta.textContent=`${t.cta}: ${EMAIL}`;}
   if(!D) return;
   const tw=D.twitch||{}, yt=D.youtube||{}, ig=D.instagram||{}, tt=D.tiktok||{}, cm=D.community||{};
   document.getElementById("pills").innerHTML=[`<span class="pill"><b>${fmt(tw.followers)}</b> ${t.followers} Twitch</span>`,`<span class="pill">${t.affiliate}</span>`,`<span class="pill">${t.drops}</span>`].join("");
